@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+
+<html lang="pt_BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>app.validators package &#8212; documentação sync 0.0.1</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Buscar" href="search.html" />
+    <link rel="prev" title="app.models package" href="app.models.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="app-validators-package">
+<h1>app.validators package<a class="headerlink" href="#app-validators-package" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-app.validators.user">
+<span id="app-validators-user-module"></span><h2>app.validators.user module<a class="headerlink" href="#module-app.validators.user" title="Link permanente para este título">¶</a></h2>
+<dl class="py class">
+<dt id="app.validators.user.UserCreateValidator">
+<em class="property">class </em><code class="sig-prename descclassname">app.validators.user.</code><code class="sig-name descname">UserCreateValidator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">required_fields</span></em>, <em class="sig-param"><span class="n">dict_fields</span></em>, <em class="sig-param"><span class="n">unique_fields</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.validators.user.UserCreateValidator" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#app.validators.validator.Validator" title="app.validators.validator.Validator"><code class="xref py py-class docutils literal notranslate"><span class="pre">app.validators.validator.Validator</span></code></a></p>
+<p>Classe de validação específica da rotina de criação de usuários</p>
+<dl class="py method">
+<dt id="app.validators.user.UserCreateValidator.minimun_password">
+<code class="sig-name descname">minimun_password</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.validators.user.UserCreateValidator.minimun_password" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verifica se o password possuir uma quantidade mínima de caracteres</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.validators.validator">
+<span id="app-validators-validator-module"></span><h2>app.validators.validator module<a class="headerlink" href="#module-app.validators.validator" title="Link permanente para este título">¶</a></h2>
+<dl class="py class">
+<dt id="app.validators.validator.Validator">
+<em class="property">class </em><code class="sig-prename descclassname">app.validators.validator.</code><code class="sig-name descname">Validator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">required_fields</span></em>, <em class="sig-param"><span class="n">dict_fields</span></em>, <em class="sig-param"><span class="n">unique_fields</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.validators.validator.Validator" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="app.validators.validator.Validator.check_validator">
+<code class="sig-name descname">check_validator</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; flask.wrappers.Response<a class="headerlink" href="#app.validators.validator.Validator.check_validator" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Checa se a payload possui todos os dados necessários</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="app.validators.validator.Validator.duplicate_unique_fields">
+<code class="sig-name descname">duplicate_unique_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; flask.wrappers.Response<a class="headerlink" href="#app.validators.validator.Validator.duplicate_unique_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verifica se existe entradas duplicadas no modelo</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="app.validators.validator.Validator.execute_all_validators">
+<code class="sig-name descname">execute_all_validators</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; flask.wrappers.Response<a class="headerlink" href="#app.validators.validator.Validator.execute_all_validators" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Executa todos os métodos de validação</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="app.validators.validator.Validator.make_dict">
+<em class="property">static </em><code class="sig-name descname">make_dict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">payload</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.validators.validator.Validator.make_dict" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Retorna o dicionário ou um erro</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.validators">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-app.validators" title="Link permanente para este título">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">sync</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegação</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">sync</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="app.html">app package</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">sync</a><ul>
+  <li><a href="app.html">app package</a><ul>
+      <li>Previous: <a href="app.models.html" title="capítulo anterior">app.models package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Busca rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Ir" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Gustavo A. Ronconi.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/app.validators.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

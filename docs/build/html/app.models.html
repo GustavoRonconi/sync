@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+
+<html lang="pt_BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>app.models package &#8212; documentação sync 0.0.1</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Buscar" href="search.html" />
+    <link rel="next" title="app.validators package" href="app.validators.html" />
+    <link rel="prev" title="app.controllers package" href="app.controllers.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="app-models-package">
+<h1>app.models package<a class="headerlink" href="#app-models-package" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-app.models.pessoa">
+<span id="app-models-pessoa-module"></span><h2>app.models.pessoa module<a class="headerlink" href="#module-app.models.pessoa" title="Link permanente para este título">¶</a></h2>
+<dl class="py class">
+<dt id="app.models.pessoa.Pessoa">
+<em class="property">class </em><code class="sig-prename descclassname">app.models.pessoa.</code><code class="sig-name descname">Pessoa</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nome</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_nascimento</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.models.pessoa.Pessoa" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.ext.declarative.api.Model</span></code></p>
+<dl class="py attribute">
+<dt id="app.models.pessoa.Pessoa.data_nascimento">
+<code class="sig-name descname">data_nascimento</code><a class="headerlink" href="#app.models.pessoa.Pessoa.data_nascimento" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.pessoa.Pessoa.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#app.models.pessoa.Pessoa.id" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.pessoa.Pessoa.nome">
+<code class="sig-name descname">nome</code><a class="headerlink" href="#app.models.pessoa.Pessoa.nome" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.pessoa.Pessoa.usuarios">
+<code class="sig-name descname">usuarios</code><a class="headerlink" href="#app.models.pessoa.Pessoa.usuarios" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.models.usuario">
+<span id="app-models-usuario-module"></span><h2>app.models.usuario module<a class="headerlink" href="#module-app.models.usuario" title="Link permanente para este título">¶</a></h2>
+<dl class="py class">
+<dt id="app.models.usuario.Usuario">
+<em class="property">class </em><code class="sig-prename descclassname">app.models.usuario.</code><code class="sig-name descname">Usuario</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id_pessoa</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.models.usuario.Usuario" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.ext.declarative.api.Model</span></code></p>
+<dl class="py attribute">
+<dt id="app.models.usuario.Usuario.email">
+<code class="sig-name descname">email</code><a class="headerlink" href="#app.models.usuario.Usuario.email" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="app.models.usuario.Usuario.fazer_hash_senha">
+<code class="sig-name descname">fazer_hash_senha</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">senha</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.models.usuario.Usuario.fazer_hash_senha" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Método utilizado para encriptar senha antes de salvar</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.usuario.Usuario.hash_senha">
+<code class="sig-name descname">hash_senha</code><a class="headerlink" href="#app.models.usuario.Usuario.hash_senha" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.usuario.Usuario.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#app.models.usuario.Usuario.id" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.usuario.Usuario.id_pessoa">
+<code class="sig-name descname">id_pessoa</code><a class="headerlink" href="#app.models.usuario.Usuario.id_pessoa" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.usuario.Usuario.pessoa">
+<code class="sig-name descname">pessoa</code><a class="headerlink" href="#app.models.usuario.Usuario.pessoa" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="app.models.usuario.Usuario.verificar_senha">
+<code class="sig-name descname">verificar_senha</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">senha</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.models.usuario.Usuario.verificar_senha" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Método utilizado para a verificação de senha</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.models">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-app.models" title="Link permanente para este título">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">sync</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegação</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">sync</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="app.html">app package</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">sync</a><ul>
+  <li><a href="app.html">app package</a><ul>
+      <li>Previous: <a href="app.controllers.html" title="capítulo anterior">app.controllers package</a></li>
+      <li>Next: <a href="app.validators.html" title="próximo capítulo">app.validators package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Busca rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Ir" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Gustavo A. Ronconi.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/app.models.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
