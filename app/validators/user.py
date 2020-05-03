@@ -1,9 +1,9 @@
-from app.validators import Validator
+from app.validators import GenericValidator
 from flask import Response
 import json
 
 
-class UserCreateValidator(Validator):
+class UserCreateValidator(GenericValidator):
     """Classe de validação específica da rotina de criação de usuários"""
     def __init__(self, required_fields, dict_fields, unique_fields):
         super().__init__(required_fields, dict_fields, unique_fields)

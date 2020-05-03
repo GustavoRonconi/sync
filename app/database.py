@@ -5,7 +5,7 @@ import os
 
 """Importa a configuração da aplicação"""
 configuration = configparser.RawConfigParser()
-configuration.read(os.path.abspath('../application.config'))
+configuration.read(os.path.abspath('application.config'))
 
 
 DATA_BASE_URI = configuration.get("DATABASE", "DATABASE_URI")

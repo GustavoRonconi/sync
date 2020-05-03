@@ -3,7 +3,7 @@ import json
 from app.database import db
 
 
-class Validator:
+class GenericValidator:
     def __init__(self, required_fields, dict_fields, unique_fields):
         self.required_fields = sorted(required_fields)
         self.dict_fields = dict_fields

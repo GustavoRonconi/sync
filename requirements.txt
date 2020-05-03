@@ -3,3 +3,4 @@ Flask-SQLAlchemy
 ConfigParser
 pymysql
 passlib
+flask-jwt-extended

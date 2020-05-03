@@ -20,3 +20,8 @@ class Usuario(db.Model):
     def verificar_senha(self, senha):
         """Método utilizado para a verificação de senha"""
         return pwd_context.verify(senha, self.hash_senha)
+
+    @property
+    def serialize(self):
+        """Retorna o objeto serializado"""
+        return {"id": self.id, "email": self.email}
